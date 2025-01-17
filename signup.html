@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="web.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const toggleLinks = document.querySelectorAll('.toggle-link');
+            const signupSection = document.querySelector('.signup-section');
+            const loginSection = document.querySelector('.login-section');
+
+            toggleLinks.forEach(link => {
+                link.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    if (signupSection.style.display === 'none') {
+                        signupSection.style.display = 'block';
+                        loginSection.style.display = 'none';
+                    } else {
+                        signupSection.style.display = 'none';
+                        loginSection.style.display = 'block';
+                    }
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+    <header class="main-header">
+        <h1 class="international-header">International Zoo</h1>
+    </header>
+    <nav>
+        <ul class="nav-bar">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="animals.html">Animals</a></li>
+            <li><a href="visitors.html">Visitor Info</a></li>
+            <li><a href="tickets.html">Tickets</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="signup.html">Sign Up/Login</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section class="signup-section">
+            <h2 class="boxed-header2">Sign Up</h2>
+            <div class="auth-form-container">
+                <form>
+                    <label for="signup-name">Name:</label>
+                    <input type="text" id="signup-name" name="name" required>
+                    
+                    <label for="signup-email">Email:</label>
+                    <input type="email" id="signup-email" name="email" required>
+                    
+                    <label for="signup-password">Password:</label>
+                    <input type="password" id="signup-password" name="password" required>
+                    
+                    <button type="button" id="signup-btn">Sign Up</button>
+                </form>
+                <a href="#" class="auth-toggle-link">Already have an account? Log in</a>
+            </div>
+        </section>
+        
+        <section class="login-section" style="display: none;">
+            <h2 class="boxed-header3">Log In</h2>
+            <div class="auth-form-container">
+                <form>
+                    <label for="login-email">Email:</label>
+                    <input type="email" id="login-email" name="login-email" required>
+                    
+                    <label for="login-password">Password:</label>
+                    <input type="password" id="login-password" name="login-password" required>
+                    
+                    <button type="button" id="login-btn">Log In</button>
+                </form>
+                <a href="#" class="auth-toggle-link">Don't have an account? Sign up</a>
+            </div>
+        </section>
+        
+    </main>
+    <footer class="main-footer">
+        <p>&copy; 2024 International Zoo</p>
+    </footer>
+</body>
+</html>

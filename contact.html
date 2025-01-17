@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const form = document.querySelector('form');
+            form.addEventListener('submit', (e) => {
+                e.preventDefault();
+                alert('Thank you for your message!');
+                form.reset();
+            });
+        });
+    </script>
+</head>
+<body>
+    <header class="main-header">
+        <h1 class="international-header">International Zoo</h1>
+    </header>
+    <nav>
+        <ul class="nav-bar">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="animals.html">Animals</a></li>
+            <li><a href="visitors.html">Visitor Info</a></li>
+            <li><a href="tickets.html">Tickets</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="signup.html">Sign up/Login</a></li>
+        </ul>
+    </nav>
+    <header>
+        <h1 class="boxed-header">Contact Us</h1>
+    </header>
+    <main>
+        <section class="contact-form">
+            <h2 class="boxed-header">Get in Touch</h2>
+            <div class="form-container">
+                <form>
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" required></textarea>
+                    <button type="submit">Send</button>
+                </form>
+            </div>
+        </section>
+    </main>
+    <footer class="main-footer">
+        <p>&copy; 2025 International Zoo</p>
+        <div class="social-links">
+            <a href="https://instagram.com" target="_blank">
+                <img src="/Frontend/images/instagram-icon.png" alt="Instagram">
+            </a>
+            <a href="https://twitter.com" target="_blank">
+                <img src="/Frontend/images/twitter-icon.png" alt="Twitter">
+            </a>
+            <a href="https://facebook.com" target="_blank">
+                <img src="/Frontend/images/facebook-icon.png" alt="Facebook">
+            </a>
+        </div>
+    </footer>
+</body>
+</html>
